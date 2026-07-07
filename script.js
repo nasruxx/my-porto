@@ -304,7 +304,7 @@ window.fetchGitHubProjects = fetchGitHubProjects;
 
 // Meta API Configuration
 const META_CONFIG = {
-    accessToken: 'EAAb3X0vue6kBR7uZBgEsYixHxcZCJkMQDE9hN5ReosuR2harhAaTLKdMbHZAbV1hol8cnG1Op1mZBLapvWoFEsqD8XaPXetsKEyflMofmZBxZBTMZBc4f88VXtxjZCiXMn42rDdbZCUk4eZBVAPfYlj1HEMZCIZBEzJoZAJOlXrN0gQqRDwlxRWINoKE2wQOZCKgfWm0YWUzFaYiUngqMqhGPa8aIZCh5Tu3pgpZAujEvTCixYMENrZAibzEixwZDZD',
+    accessToken: 'EAAb3X0vue6kBR6L2PBxJGZBPUAbgOZBut5gyPfpYTm6bz3Egwy17DZBNdjhslXVI4ZCzWyeR89HghBjI2BVXezzL5Qja3fFuN9bac04s2lcVg7E7zK0EZAvsV6tm0q0izZCRPMxl044ZAuZAV3sEriY61y4517CwUHHeHSutFVeBVAybtUGATTOJ8BphGDRnyAZDZD',
     adAccountId: 'act_440674681817458',
     appId: '1960838528138153',
     apiVersion: 'v21.0'
