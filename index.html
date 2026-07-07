@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
@@ -17,6 +18,7 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#about">Tentang</a></li>
                 <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#meta-ads">Meta Ads</a></li>
                 <li><a href="#projects">Proyek</a></li>
                 <li><a href="#contact">Kontak</a></li>
                 <li><a href="CV-2026.pdf" target="_blank" class="nav-resume">Resume ↗</a></li>
@@ -146,6 +148,141 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== META ADS DASHBOARD ===== -->
+    <section id="meta-ads" class="section meta-ads">
+        <div class="container">
+            <div class="meta-ads-header">
+                <div>
+                    <span class="section-label"><i class="fab fa-meta"></i> Meta Ads</span>
+                    <h2 class="section-heading">Dashboard Analisis Iklan</h2>
+                </div>
+                <div class="meta-ads-controls">
+                    <select id="meta-date-range" class="meta-select">
+                        <option value="last_7d">7 Hari Terakhir</option>
+                        <option value="last_14d">14 Hari Terakhir</option>
+                        <option value="last_30d" selected>30 Hari Terakhir</option>
+                        <option value="last_90d">90 Hari Terakhir</option>
+                    </select>
+                    <button class="meta-config-btn" id="meta-config-toggle" aria-label="API Configuration" style="display: none;">
+                        <i class="fas fa-cog"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="meta-kpi-grid" id="meta-kpi-grid">
+                <div class="meta-kpi-card kpi-spend">
+                    <div class="kpi-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Total Spend</span>
+                        <span class="kpi-value" id="kpi-spend">Rp 0</span>
+                        <span class="kpi-change positive" id="kpi-spend-change"><i class="fas fa-arrow-up"></i> 0%</span>
+                    </div>
+                </div>
+                <div class="meta-kpi-card kpi-reach">
+                    <div class="kpi-icon"><i class="fas fa-users"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Reach</span>
+                        <span class="kpi-value" id="kpi-reach">0</span>
+                        <span class="kpi-change positive" id="kpi-reach-change"><i class="fas fa-arrow-up"></i> 0%</span>
+                    </div>
+                </div>
+                <div class="meta-kpi-card kpi-impressions">
+                    <div class="kpi-icon"><i class="fas fa-eye"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Impressions</span>
+                        <span class="kpi-value" id="kpi-impressions">0</span>
+                        <span class="kpi-change positive" id="kpi-impressions-change"><i class="fas fa-arrow-up"></i> 0%</span>
+                    </div>
+                </div>
+                <div class="meta-kpi-card kpi-clicks">
+                    <div class="kpi-icon"><i class="fas fa-mouse-pointer"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Clicks</span>
+                        <span class="kpi-value" id="kpi-clicks">0</span>
+                        <span class="kpi-change positive" id="kpi-clicks-change"><i class="fas fa-arrow-up"></i> 0%</span>
+                    </div>
+                </div>
+                <div class="meta-kpi-card kpi-conversions">
+                    <div class="kpi-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="kpi-content">
+                        <span class="kpi-label">Conversions</span>
+                        <span class="kpi-value" id="kpi-conversions">0</span>
+                        <span class="kpi-change positive" id="kpi-conversions-change"><i class="fas fa-arrow-up"></i> 0%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="meta-charts-row">
+                <div class="meta-chart-card meta-chart-main">
+                    <div class="meta-chart-header">
+                        <h3>Tren Performa</h3>
+                        <div class="meta-chart-tabs">
+                            <button class="chart-tab active" data-metric="impressions">Impressions</button>
+                            <button class="chart-tab" data-metric="clicks">Clicks</button>
+                            <button class="chart-tab" data-metric="spend">Spend</button>
+                        </div>
+                    </div>
+                    <div class="meta-chart-body">
+                        <canvas id="meta-performance-chart"></canvas>
+                    </div>
+                </div>
+                <div class="meta-chart-card meta-chart-side">
+                    <div class="meta-chart-header">
+                        <h3>Alokasi Budget</h3>
+                    </div>
+                    <div class="meta-chart-body">
+                        <canvas id="meta-budget-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Chart -->
+            <div class="meta-chart-card meta-chart-full">
+                <div class="meta-chart-header">
+                    <h3>Perbandingan Campaign</h3>
+                    <div class="meta-chart-tabs">
+                        <button class="comparison-tab active" data-compare="ctr">CTR</button>
+                        <button class="comparison-tab" data-compare="cpc">CPC</button>
+                        <button class="comparison-tab" data-compare="roas">ROAS</button>
+                    </div>
+                </div>
+                <div class="meta-chart-body">
+                    <canvas id="meta-comparison-chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Campaign Table -->
+            <div class="meta-table-card">
+                <div class="meta-table-header">
+                    <h3><i class="fas fa-list"></i> Detail Campaign</h3>
+                </div>
+                <div class="meta-table-wrap">
+                    <table class="meta-table" id="meta-campaign-table">
+                        <thead>
+                            <tr>
+                                <th>Campaign</th>
+                                <th>Status</th>
+                                <th>Budget</th>
+                                <th>Spend</th>
+                                <th>Impressions</th>
+                                <th>Clicks</th>
+                                <th>CTR</th>
+                                <th>CPC</th>
+                                <th>Conversions</th>
+                                <th>ROAS</th>
+                            </tr>
+                        </thead>
+                        <tbody id="meta-campaign-tbody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
         </div>
     </section>
 
