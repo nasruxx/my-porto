@@ -324,13 +324,6 @@ let metaData = {
 
 // ---- Initialize Meta Dashboard ----
 function initMetaDashboard() {
-    const dateSelect = document.getElementById('meta-date-range');
-
-    if (dateSelect) {
-        dateSelect.addEventListener('change', () => {
-            fetchRealMetaData();
-        });
-    }
 
     // Chart metric tabs
     document.querySelectorAll('.chart-tab').forEach(tab => {
@@ -745,7 +738,7 @@ function renderCampaignTable(campaigns) {
 // ---- Meta API Integration ----
 async function fetchRealMetaData() {
     const { accessToken, adAccountId, apiVersion } = META_CONFIG;
-    const dateRange = document.getElementById('meta-date-range').value;
+    const dateRange = 'last_90d';
 
     if (!accessToken || !adAccountId) {
         showToast('Token Meta Ads belum dikonfigurasi.', 'warn');
