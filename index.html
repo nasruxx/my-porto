@@ -1,287 +1,241 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Nasrul — IT Support & Network</title>
+    <meta name="description" content="Muhammad Nasrul Syarifudin, IT Support Professional berbasis di Indonesia. Spesialis jaringan, troubleshooting, dan infrastruktur IT.">
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,300;0,400;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <span class="brand-text">Muhammad Nasrul Syarifudin</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="CV-2026.pdf/" target="_blank" class="nav-link resume-link">Resume</a></li>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">nasrul<span>.</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Proyek</a></li>
+                <li><a href="#contact">Kontak</a></li>
+                <li><a href="CV-2026.pdf" target="_blank" class="nav-resume">Resume ↗</a></li>
             </ul>
-            <div class="hamburger">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
-                <span></span>
-            </div>
+            </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="gradient-text">Nasrul</span>
-                    </h1>
-                    <p class="hero-subtitle">IT Support Professional & Network Support</p>
-                    <p class="hero-description">
-                        I provide comprehensive IT support services, manage network infrastructure, 
-                        and troubleshoot technical issues. Passionate about maintaining reliable 
-                        systems and helping users with their technology needs.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
-                            <i class="fas fa-code"></i>
-                            View My Work
-                        </a>
-                        <a href="#contact" class="btn btn-outline">
-                            <i class="fas fa-envelope"></i>
-                            Get In Touch
-                        </a>
-                    </div>
-                    <div class="hero-social">
-                        <a href="https://github.com/nasruxx" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/muhammad-nasrul-syarifudin-bbb928169/" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://x.com/Nasrul_Syarif20?t=SH0vVF2KucFmCVMqdqVZdw&s=09" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </div>
+    <header id="home" class="hero">
+        <div class="hero-inner">
+            <div class="hero-photo-col">
+                <div class="hero-photo-wrap">
+                    <img src="1.png" alt="Muhammad Nasrul Syarifudin" class="hero-photo">
                 </div>
-               <div class="hero-image">
-            <div class="profile-card">
-                <div class="profile-avatar">
-                    <img src="1.png" alt="Muhammad Nasrul Syarifudin" class="profile-photo">
+            </div>
+            <div class="hero-text-col">
+                <p class="hero-greeting">Halo, saya</p>
+                <h1 class="hero-name">Muhammad Nasrul<br>Syarifudin</h1>
+                <p class="hero-role">IT Support & Network Engineer</p>
+                <p class="hero-desc">
+                    Saya mengelola infrastruktur jaringan, menyelesaikan masalah teknis, 
+                    dan memastikan sistem berjalan lancar. Saat ini fokus di network support 
+                    dan system administration.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-main">Lihat Proyek</a>
+                    <a href="#contact" class="btn-ghost">Hubungi Saya</a>
                 </div>
-                <div class="floating-elements">
-                    <div class="floating-element" style="--delay: 0s">
-                        <i class="fab fa-js-square"></i>
-                    </div>
-                    <div class="floating-element" style="--delay: 1s">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <div class="floating-element" style="--delay: 2s">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <div class="floating-element" style="--delay: 3s">
-                        <i class="fab fa-python"></i>
-                    </div>
+                <div class="hero-socials">
+                    <a href="https://github.com/nasruxx" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-nasrul-syarifudin-bbb928169/" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://x.com/Nasrul_Syarif20?t=SH0vVF2KucFmCVMqdqVZdw&s=09" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section about">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-card">
-                        <h3>Who I Am</h3>
-                        <p>
-                            I'm a dedicated IT Support Professional with expertise in network management, 
-                            system administration, and technical troubleshooting. I specialize in maintaining 
-                            reliable IT infrastructure and providing excellent user support services.
-                        </p>
-                        <p>
-                            When I'm not solving technical issues, you can find me learning about new 
-                            networking technologies, optimizing system performance, or helping colleagues 
-                            with their IT challenges.
-                        </p>
-                    </div>
+            <div class="about-grid">
+                <div class="about-main">
+                    <span class="section-label">Tentang Saya</span>
+                    <h2 class="section-heading">Sedikit cerita tentang saya</h2>
+                    <p>
+                        Saya adalah seorang IT Support Professional dengan keahlian dalam manajemen jaringan, 
+                        administrasi sistem, dan troubleshooting teknis. Saya senang memastikan infrastruktur 
+                        IT berjalan tanpa hambatan dan membantu pengguna menyelesaikan masalah teknologi mereka.
+                    </p>
+                    <p>
+                        Di luar pekerjaan, saya sering mengeksplorasi teknologi jaringan baru, 
+                        mengoptimasi performa sistem, dan berbagi pengetahuan dengan rekan kerja. 
+                        Saya percaya teknologi yang baik adalah teknologi yang berjalan tanpa disadari.
+                    </p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" id="repos-count">0</div>
-                        <div class="stat-label">GitHub Repos</div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="repos-count">0</span>
+                        <span class="stat-desc">Repositori GitHub</span>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="stars-count">0</div>
-                        <div class="stat-label">Total Stars</div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="stars-count">0</span>
+                        <span class="stat-desc">Total Stars</span>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number" id="languages-count">0</div>
-                        <div class="stat-label">Languages</div>
+                    <div class="stat-item">
+                        <span class="stat-num" id="languages-count">0</span>
+                        <span class="stat-desc">Bahasa Pemrograman</span>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Skills</h2>
-                <p class="section-subtitle">Technologies and tools I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4><i class="fas fa-headset"></i> Support</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Software</span>
-                        <span class="skill-tag">Hardware</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-desktop"></i> Sistem Operasi</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Proxmox</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-network-wired"></i> Jaringan</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">TCP/IP</span>
-                        <span class="skill-tag">Routing</span>
-                        <span class="skill-tag">Cisco</span>
-                        <span class="skill-tag">MikroTik</span>
-                        <span class="skill-tag">FTTH</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-file-alt"></i> Office</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Word</span>
-                        <span class="skill-tag">Microsoft Excel</span>
-                        <span class="skill-tag">Microsoft PowerPoint</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-code"></i> Programming</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">PYTHON</span>
-                        <span class="skill-tag">CSS</span>
-                        <span class="skill-tag">SQL</span>
+                    <div class="stat-item">
+                        <span class="stat-num">2+</span>
+                        <span class="stat-desc">Tahun Pengalaman</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <section id="skills" class="section skills">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Projects</h2>
-                <p class="section-subtitle">Here are some of my recent works from GitHub</p>
+            <span class="section-label">Keahlian</span>
+            <h2 class="section-heading">Tools & teknologi yang saya gunakan</h2>
+            <div class="skills-list">
+                <div class="skill-group">
+                    <h3><i class="fas fa-headset"></i> Support</h3>
+                    <div class="tags">
+                        <span>Software Troubleshooting</span>
+                        <span>Hardware Maintenance</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-server"></i> Sistem Operasi</h3>
+                    <div class="tags">
+                        <span>Windows Server</span>
+                        <span>Linux</span>
+                        <span>Proxmox</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-network-wired"></i> Jaringan</h3>
+                    <div class="tags">
+                        <span>TCP/IP</span>
+                        <span>Routing & Switching</span>
+                        <span>Cisco</span>
+                        <span>MikroTik</span>
+                        <span>FTTH</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-file-alt"></i> Office</h3>
+                    <div class="tags">
+                        <span>Word</span>
+                        <span>Excel</span>
+                        <span>PowerPoint</span>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="tags">
+                        <span>HTML & CSS</span>
+                        <span>Python</span>
+                        <span>SQL</span>
+                    </div>
+                </div>
             </div>
-            
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <span class="section-label">Proyek</span>
+            <h2 class="section-heading">Apa yang sudah saya kerjakan</h2>
+
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">Semua</button>
                 <button class="filter-btn" data-filter="javascript">JavaScript</button>
                 <button class="filter-btn" data-filter="python">Python</button>
                 <button class="filter-btn" data-filter="html">HTML/CSS</button>
             </div>
 
             <div class="projects-loading" id="projects-loading">
-                <div class="loading-spinner"></div>
-                <p>Loading projects from GitHub...</p>
+                <div class="loader"></div>
+                <p>Mengambil data dari GitHub...</p>
             </div>
 
-            <div class="projects-grid" id="projects-grid">
-                <!-- Projects will be loaded here dynamically -->
-            </div>
+            <div class="projects-grid" id="projects-grid"></div>
 
             <div class="projects-error" id="projects-error" style="display: none;">
-                <i class="fas fa-exclamation-triangle"></i>
-                <h3>Unable to load projects</h3>
-                <p>Please check your internet connection and try again.</p>
-                <button class="btn btn-primary" onclick="fetchGitHubProjects()">
-                    <i class="fas fa-redo"></i>
-                    Retry
-                </button>
+                <i class="fas fa-wifi" style="font-size: 2rem; opacity: 0.4;"></i>
+                <h3>Gagal memuat proyek</h3>
+                <p>Cek koneksi internet dan coba lagi.</p>
+                <button class="btn-main" onclick="fetchGitHubProjects()">Coba Lagi</button>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="section contact">
         <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Let's Work Together</h2>
-                <p class="section-subtitle">Have a project in mind? Let's discuss it!</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-icon">
+            <div class="contact-grid">
+                <div class="contact-left">
+                    <span class="section-label">Kontak</span>
+                    <h2 class="section-heading">Mari bekerja sama</h2>
+                    <p class="contact-intro">
+                        Punya proyek atau pertanyaan? Jangan ragu untuk menghubungi saya. 
+                        Saya selalu terbuka untuk diskusi dan peluang baru.
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:muhammadnarsrul@gmail.com" class="contact-link-item">
                             <i class="fas fa-envelope"></i>
-                        </div>
-                        <h3>Email</h3>
-                        <p>Drop me a line anytime</p>
-                        <a href="mailto:nasrul@example.com">muhammadnarsrul@gmail.com</a>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
+                            <div>
+                                <strong>Email</strong>
+                                <span>muhammadnarsrul@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/nasruxx" target="_blank" class="contact-link-item">
                             <i class="fab fa-github"></i>
-                        </div>
-                        <h3>GitHub</h3>
-                        <p>Check out my repositories</p>
-                        <a href="https://github.com/nasruxx" target="_blank">@nasruxx</a>
-                    </div>
-                    <div class="contact-card">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <h3>LinkedIn</h3>
-                        <p>Let's connect professionally</p>
-                        <a href="#" target="_blank">Connect with me</a>
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>@nasruxx</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhammad-nasrul-syarifudin-bbb928169/" target="_blank" class="contact-link-item">
+                            <i class="fab fa-linkedin-in"></i>
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>Muhammad Nasrul Syarifudin</span>
+                            </div>
+                        </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                <div class="contact-right">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-field">
+                                <label for="name">Nama</label>
+                                <input type="text" id="name" name="name" placeholder="Nama lengkap" required>
+                            </div>
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="email@contoh.com" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                        <div class="form-field">
+                            <label for="subject">Subjek</label>
+                            <input type="text" id="subject" name="subject" placeholder="Tentang apa?" required>
                         </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
+                        <div class="form-field">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
+                        <button type="submit" class="btn-main">
+                            Kirim Pesan <i class="fas fa-arrow-right"></i>
                         </button>
                     </form>
                 </div>
@@ -289,31 +243,19 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2024 Nasrul. All rights reserved.</p>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/nasruxx" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="#" class="social-link">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
+        <div class="container footer-inner">
+            <p>&copy; 2026 Nasrul. Dibuat dengan ☕ dan keyboard.</p>
+            <div class="footer-links">
+                <a href="https://github.com/nasruxx" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-nasrul-syarifudin-bbb928169/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/Nasrul_Syarif20?t=SH0vVF2KucFmCVMqdqVZdw&s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+    <button id="back-to-top" class="back-top" aria-label="Kembali ke atas">
+        <i class="fas fa-chevron-up"></i>
     </button>
 
     <script src="script.js"></script>
